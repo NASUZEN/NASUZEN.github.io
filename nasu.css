@@ -1,29 +1,128 @@
-/* nasu.css */
-
-/* H1要素のスタイル */
-h1 {
-    /* 例: 非常に大きく */
-    font-size: 32px; 
-    /* その他のスタイルは必要に応じて追加 */
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* 薄い背景色 */
 }
 
-/* H2要素のスタイル */
-h2 {
-    /* 例: 少し小さめに */
-    font-size: 20px;
-    /* その他のスタイルは必要に応じて追加 */
+/* ヘッダー */
+header {
+    background-color: #1a5e30; /* 柏市のシンボルカラーに近い濃い緑 */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
-    /* 例: 少し小さめに */
-    font-size: 25px;
-    /* その他のスタイルは必要に応じて追加 */
-}/* P要素（段落）のスタイル */
-
-p {
-    /* 例: 標準的なサイズ */
-    font-size: 16px;
-    /* その他のスタイルは必要に応じて追加 */
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
 }
 
-/* 必要に応じて、ここに他のCSSルールを追加できます */
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* ナビゲーション */
+nav {
+    background-color: #388e3c; /* 少し明るい緑 */
+    text-align: center;
+    position: sticky; /* スクロールしても追従 */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #1a5e30; /* ホバーで濃い緑 */
+}
+
+/* メインコンテンツ */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container h2 {
+    color: #388e3c;
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+/* おすすめスポットカード */
+#attractions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* レスポンシブなグリッド */
+    gap: 20px;
+}
+
+.spot-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.spot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spot-card h3 {
+    color: #00796b; /* アクセントカラー */
+    margin-top: 0;
+}
+
+/* アクセスリスト */
+#access ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#access li {
+    background: #e8f5e9; /* 薄い緑の背景 */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #388e3c;
+    border-radius: 4px;
+}
+
+/* フッター */
+footer {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
